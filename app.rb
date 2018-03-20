@@ -7,6 +7,8 @@ class App < Sinatra::Base
   end 
   
   post '/' do 
+    @student = Student.new(params[:student])
+    
     erb :student 
   end 
 
